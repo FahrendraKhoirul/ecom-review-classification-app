@@ -183,17 +183,10 @@ def show_result(outputs):
     df = pd.DataFrame(new_outputs)
     st.write(df)
 
-    # # Display the scores in a more beautiful way
-    # for output in new_outputs:
-    #     st.markdown("### Predicted Scores")
-    #     for label, score in output['predicted_score'].items():
-    #         st.markdown(f"<div style='padding: 5px; border-radius: 5px; background-color: #f0f0f0; margin-bottom: 5px;'>"
-    #                     f"<strong>{label}:</strong> <span style='color: #007BFF;'>{score}</span></div>", 
-    #                     unsafe_allow_html=True)
-    button_download = st.button("Download as csv")
-    if button_download:
-        df.to_csv("result.csv", index=False)
-        st.success("Result has been downloaded as csv")
+    # create note if wanna download, hove on top right in table show
+    st.markdown("**Note:** To download the table, hover over the top right corner of the table and click the download button.")
+    
+
 
 
 if button_submit and pipeline.ready_status:
