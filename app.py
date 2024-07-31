@@ -129,15 +129,15 @@ def chips_label(output):
     asd = []
     for label in output["predicted_labels"]:
         if label == "Product":
-            score = f"{output["predicted_score"][0] * 100:.2f}%"
+            score = f"{output['predicted_score'][0] * 100:.2f}%"
             score = f"<strong>{score}</strong>"
             asd.append(f"<div class='rounded-label-product'>📦Product {score}</div>")
         elif label == "Customer Service":
-            score = f"{output["predicted_score"][1] * 100:.2f}%"
+            score = f"{output['predicted_score'][1] * 100:.2f}%"
             score = f"<strong>{score}</strong>"
             asd.append(f"<div class='rounded-label-customer-service'>👩‍💼Customer Service {score}</div>")
         elif label == "Shipping/Delivery":
-            score = f"{output["predicted_score"][2] * 100:.2f}%"
+            score = f"{output['predicted_score'][2] * 100:.2f}%"
             score = f"<strong>{score}</strong>"
             asd.append(f"<div class='rounded-label-shipping-delivery'>🚚Shipping/Delivery {score}</div>")
     # for label, score in zip(output["predicted_labels"], output["predicted_score"]):
