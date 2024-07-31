@@ -65,9 +65,9 @@ def predict(text: str, model_name: str):
     model = None
     if model_name == "IndoBERT":
         model = indobert_model
-    if model_name == "IndoBERT-CNN (Best)":
+    if model_name == "IndoBERT-CNN":
         model = indobertcnn_model
-    if model_name == "IndoBERT-LSTM":
+    if model_name == "IndoBERT-LSTM (Best)":
         model = indobertlstm_model
     input_ids = token_result['input_ids']
     attention_mask = token_result['attention_mask']

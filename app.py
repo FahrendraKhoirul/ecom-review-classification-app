@@ -45,7 +45,7 @@ with row1_1:
 with row1_2:
     selected_model = st.selectbox(
         "Choose the model",
-        ("IndoBERT", "IndoBERT-CNN (Best)", "IndoBERT-LSTM"),
+        ("IndoBERT", "IndoBERT-CNN", "IndoBERT-LSTM (Best)"),
     )
 
 # text input
@@ -185,7 +185,7 @@ def show_result(outputs):
 
     # create note if wanna download, hove on top right in table show
     st.markdown("**Note:** To download the table, hover over the top right corner of the table and click the download button.")
-    
+
 
 
 
